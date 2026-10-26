@@ -9,7 +9,7 @@ on:
 
 jobs:
   typecheck:
-    runs-on: ubuntu-latest
+    runs-on: [self-hosted, linux, x64]
     steps:
       - name: Checkout repository
         uses: actions/checkout@v4
@@ -90,7 +90,7 @@ jobs:
 
   nix-flake-check:
     name: Check Nix flake
-    runs-on: ubuntu-latest
+    runs-on: [self-hosted, linux, x64]
     steps:
       - name: Checkout repository
         uses: actions/checkout@v4
